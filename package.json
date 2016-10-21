@@ -1,6 +1,6 @@
 {
   "name": "p-try",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "`Promise#try()` ponyfill - Starts a promise chain",
   "license": "MIT",
   "repository": "sindresorhus/p-try",
