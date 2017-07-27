@@ -1,6 +1,6 @@
 # p-try [![Build Status](https://travis-ci.org/sindresorhus/p-try.svg?branch=master)](https://travis-ci.org/sindresorhus/p-try)
 
-> [`Promise#try()`](https://github.com/ljharb/proposal-promise-try) [ponyfill](https://ponyfill.com) - Starts a promise chain
+> [`Promise.try()`](https://github.com/tc39/proposal-promise-try) [ponyfill](https://ponyfill.com) - Starts a promise chain
 
 [How is it useful?](http://cryto.net/~joepie91/blog/2016/05/11/what-is-promise-try-and-why-does-it-matter/)
 
@@ -8,7 +8,7 @@
 ## Install
 
 ```
-$ npm install --save p-try
+$ npm install p-try
 ```
 
 
