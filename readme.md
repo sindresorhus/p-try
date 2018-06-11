@@ -27,6 +27,13 @@ pTry(() => {
 ```
 
 
+## API
+
+### pTry(fn, ...args)
+
+Returns a `Promise` resolved with the value of calling `fn(...args)`. If the function throws an error, the returned `Promise` will be rejected with that error.
+
+
 ## Related
 
 - [p-finally](https://github.com/sindresorhus/p-finally) - `Promise#finally()` ponyfill - Invoked when the promise is settled regardless of outcome
