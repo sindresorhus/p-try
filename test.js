@@ -4,7 +4,7 @@ import m from '.';
 const fixture = Symbol('fixture');
 const fixtureErr = new Error('fixture');
 
-test(async t => {
+test('main', async t => {
 	t.is(await m(() => fixture), fixture);
 
 	await t.throws(m(() => Promise.reject(fixtureErr)), fixtureErr.message);
@@ -14,6 +14,6 @@ test(async t => {
 	}), fixtureErr.message);
 });
 
-test('Allows passing arguments through', async t => {
+test('allows passing arguments through', async t => {
 	t.is(await m(a => a, fixture), fixture);
 });
