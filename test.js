@@ -13,3 +13,7 @@ test(async t => {
 		throw fixtureErr;
 	}), fixtureErr.message);
 });
+
+test('Allows passing arguments through', async t => {
+	t.is(await m(a => a, fixture), fixture);
+});

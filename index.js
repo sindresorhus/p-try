@@ -1,4 +1,4 @@
 'use strict';
-module.exports = cb => new Promise(resolve => {
-	resolve(cb());
+module.exports = (cb, ...args) => new Promise(resolve => {
+	resolve(cb(...args));
 });
