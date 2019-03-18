@@ -1,7 +1,7 @@
 'use strict';
 
-const pTry = (callback, ...arguments_) => new Promise(resolve => {
-	resolve(callback(...arguments_));
+const pTry = (fn, ...arguments_) => new Promise(resolve => {
+	resolve(fn(...arguments_));
 });
 
 module.exports = pTry;

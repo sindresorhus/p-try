@@ -15,5 +15,5 @@ test('main', async t => {
 });
 
 test('allows passing arguments through', async t => {
-	t.is(await pTry(a => a, fixture), fixture);
+	t.is(await pTry(argument => argument, fixture), fixture);
 });
