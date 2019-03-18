@@ -1,5 +1,8 @@
 'use strict';
 
-module.exports = (callback, ...args) => new Promise(resolve => {
-	resolve(callback(...args));
+const pTry = (callback, ...arguments_) => new Promise(resolve => {
+	resolve(callback(...arguments_));
 });
+
+module.exports = pTry;
+module.exports.default = pTry;
