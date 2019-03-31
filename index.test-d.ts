@@ -1,5 +1,5 @@
-import {expectType} from 'tsd-check';
-import pTry from '.';
+import {expectType} from 'tsd';
+import pTry = require('.');
 
 expectType<Promise<string>>(pTry(() => 'foo'));
 expectType<Promise<number>>(pTry(() => Promise.resolve(1)));

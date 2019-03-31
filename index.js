@@ -5,4 +5,5 @@ const pTry = (fn, ...arguments_) => new Promise(resolve => {
 });
 
 module.exports = pTry;
+// TODO: remove this in the next major version
 module.exports.default = pTry;
