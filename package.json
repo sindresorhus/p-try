@@ -1,6 +1,6 @@
 {
 	"name": "p-try",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "`Start a promise chain",
 	"license": "MIT",
 	"repository": "sindresorhus/p-try",
