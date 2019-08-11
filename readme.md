@@ -27,24 +27,38 @@ const pTry = require('p-try');
 		console.error(error);
 	}
 })();
+
+(async () => {
+	try {
+		const value = await pTry(0).then(value => ++value);
+		console.log(value);
+	} catch (error) {
+		console.error(error);
+	}
+})();
 ```
 
 
 ## API
 
-### pTry(fn, ...arguments)
+### pTry(entry, ...arguments)
 
-Returns a `Promise` resolved with the value of calling `fn(...arguments)`. If the function throws an error, the returned `Promise` will be rejected with that error.
+Returns a `Promise` resolved with a given value.
 
-Support for passing arguments on to the `fn` is provided in order to be able to avoid creating unnecessary closures. You probably don't need this optimization unless you're pushing a *lot* of functions.
+- If the value is a function its resolved by calling `entry(...arguments)` or throws an error, the returned `Promise` will be rejected with that error.
 
-#### fn
+	Support for passing arguments on to the `entry` is provided in order to be able to avoid creating unnecessary closures. You probably don't need this optimization unless you're pushing a *lot* of functions.
 
-The function to run to start the promise chain.
+- If the value is not function its resolved by `Promise.resolve(entry)`
+
+
+#### entry
+
+The function to run or a value to resolve to start the promise chain
 
 #### arguments
 
-Arguments to pass to `fn`.
+Arguments to pass to `entry` if its a function.
 
 
 ## Related

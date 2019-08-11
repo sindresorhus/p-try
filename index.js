@@ -1,9 +1,15 @@
 'use strict';
 
-const pTry = (fn, ...arguments_) => new Promise(resolve => {
-	resolve(fn(...arguments_));
-});
+const pTry = (entry, ...arguments_) => {
+	const invokable = typeof entry === 'function';
+
+	return invokable ?
+		new Promise(resolve => {
+			resolve(entry(...arguments_));
+		}) :
+		Promise.resolve(entry);
+};
 
 module.exports = pTry;
-// TODO: remove this in the next major version
+
 module.exports.default = pTry;
