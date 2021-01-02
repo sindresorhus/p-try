@@ -1,4 +1,4 @@
-# p-try [![Build Status](https://travis-ci.org/sindresorhus/p-try.svg?branch=master)](https://travis-ci.org/sindresorhus/p-try)
+# p-try
 
 > Start a promise chain
 
