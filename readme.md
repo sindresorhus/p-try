@@ -4,31 +4,26 @@
 
 [How is it useful?](http://cryto.net/~joepie91/blog/2016/05/11/what-is-promise-try-and-why-does-it-matter/)
 
-
 ## Install
 
+```sh
+npm install p-try
 ```
-$ npm install p-try
-```
-
 
 ## Usage
 
 ```js
-const pTry = require('p-try');
+import pTry from 'p-try';
 
-(async () => {
-	try {
-		const value = await pTry(() => {
-			return synchronousFunctionThatMightThrow();
-		});
-		console.log(value);
-	} catch (error) {
-		console.error(error);
-	}
-})();
+try {
+	const value = await pTry(() => {
+		return synchronousFunctionThatMightThrow();
+	});
+	console.log(value);
+} catch (error) {
+	console.error(error);
+}
 ```
-
 
 ## API
 
@@ -46,12 +41,9 @@ The function to run to start the promise chain.
 
 Arguments to pass to `fn`.
 
-
 ## Related
 
-- [p-finally](https://github.com/sindresorhus/p-finally) - `Promise#finally()` ponyfill - Invoked when the promise is settled regardless of outcome
 - [More…](https://github.com/sindresorhus/promise-fun)
-
 
 ---
 

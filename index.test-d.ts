@@ -1,8 +1,8 @@
 import {expectType} from 'tsd';
-import pTry = require('.');
+import pTry from './index.js';
 
 expectType<Promise<string>>(pTry(() => 'foo'));
-expectType<Promise<number>>(pTry(() => Promise.resolve(1)));
+expectType<Promise<number>>(pTry(async () => 1));
 expectType<Promise<number>>(
-	pTry((string: string, number: number) => 1, 'foo', 1)
+	pTry((_string: string, _number: number) => 1, 'foo', 1),
 );
